@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+<body>
+    <body>
+        <div id="root">
+            <!--creating a heading element using html-->
+            <h1>webpage</h1>
+            <h1>Not Rendered</h1>
+        </div>
+        <!--creating a heading element using html-->
+        <h3>webpage</h3>
+        <script>
+            //creating javascript element h1
+            var h1 = document.createElement("h1");
+            h1.innerHTML = "Hello world";
+
+            //fetching root element or container of the page
+            var root = document.getElementById("root");
+
+            root.appendChild(h1);
+        </script>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script>
+            //creating react element using CDN links
+            var h1react= React.createElement("h6",{},"Hello World");
+            var htmlRoot = document.getElementById("root");
+            var rootReact = ReactDOM.createRoot(htmlRoot);
+            rootReact.render(h1react);
+        </script>
+
+        <script type="module" src="App.js"></script>
+    </body>
+</body>
+</html>
